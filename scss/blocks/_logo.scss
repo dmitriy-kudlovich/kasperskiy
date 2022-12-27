@@ -1,0 +1,9 @@
+.logo {
+  color: #00a88e;
+  font-size: 1rem;
+  transition: text-shadow 0.2s;
+
+  &:hover {
+    text-shadow: 0px 0px 3px #00a88e80;
+  }
+}

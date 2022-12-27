@@ -1,0 +1,27 @@
+.select-wrapper {
+  position: relative;
+  &::after {
+    content: url(../img/icons/icon__arrow-down.svg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.75rem;
+
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+.select {
+  outline: none;
+  font-size: 0.875em;
+  padding-right: 1.0625em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

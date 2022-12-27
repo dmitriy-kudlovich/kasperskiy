@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+
+body {
+  font-family: "Kaspersky Sans";
+  color: #444444;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Kaspersky Sans";
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+[class*="container"] {
+  position: relative;
+  margin: 0 auto;
+  max-width: 68.75rem;
+  min-width: 20rem;
+  padding: 0 15px;
+
+  @media (min-width: 68.75rem) {
+    padding: 0;
+  }
+}
+
+.text {
+  margin-bottom: 1.3125rem;
+  font-weight: 300;
+  font-size: 1.3125rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text--italic {
+  font-style: italic;
+}
+
+.text--akzidenz {
+  font-family: "Akzidenz Grotesk";
+}
+
+.text--bold {
+  font-weight: 700;
+}
+
+.text--large {
+  font-size: 2.5rem;
+}
+
+.text--lightgrey {
+  color: #666666;
+}

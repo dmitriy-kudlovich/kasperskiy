@@ -1,0 +1,29 @@
+.header__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3125rem 0;
+  z-index: 1;
+}
+
+.header__content {
+  position: relative;
+  padding-top: 2.4375rem;
+  width: 74%;
+}
+
+.header__desc {
+  margin-bottom: 1.8125rem;
+
+  &:last-child {
+    margin-bottom: 2.75rem;
+  }
+}
+
+.header__img-wrapper {
+  position: absolute;
+  top: 0;
+  right: -146%;
+  background: url(../img/bg.png);
+}

@@ -1,0 +1,13 @@
+.tip-wrapper {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: url(../img/icons/icon__tip.svg);
+  }
+}
+
+.tip-wrapper__text {
+  margin-right: 0.25rem;
+  font-size: 1rem;
+}
