@@ -288,6 +288,7 @@ button:active {
 
 .tip-wrapper {
   display: flex;
+  position: relative;
   align-items: center;
 }
 .tip-wrapper::after {

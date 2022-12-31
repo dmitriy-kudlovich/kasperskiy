@@ -1,5 +1,6 @@
 .tip-wrapper {
   display: flex;
+  position: relative;
   align-items: center;
 
   &::after {
@@ -11,3 +12,6 @@
   margin-right: 0.25rem;
   font-size: 1rem;
 }
+
+
+
