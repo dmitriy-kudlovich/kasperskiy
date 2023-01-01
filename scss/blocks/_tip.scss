@@ -1,17 +1,35 @@
-.tip-wrapper {
-  display: flex;
+.tip {
   position: relative;
-  align-items: center;
+  margin-left: 0.25rem;
 
-  &::after {
-    content: url(../img/icons/icon__tip.svg);
+  &:hover .tip__text {
+    display: block;
   }
 }
 
-.tip-wrapper__text {
-  margin-right: 0.25rem;
-  font-size: 1rem;
+.tip__text {
+  display: none;
+  position: absolute;
+  left: 140%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  width: 22.5rem;
+  text-align: center;
+  box-shadow: 0px 4px 20px rgba(92, 133, 150, 0.24);
+  border-radius: 4px;
+  background-color: #fff;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 4px;
+    transform: translate(60%, -50%) rotate(45deg);
+    background-color: #fff;
+  }
 }
-
-
-
