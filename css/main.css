@@ -320,6 +320,7 @@ button:active {
   position: absolute;
   bottom: 100%;
   width: 100%;
+  transition: bottom 0.2s;
 }
 
 .product-card__plan {
