@@ -110,29 +110,30 @@
 
 .product-card__plan-wrapper {
   position: relative;
-  // overflow: hidden;
   margin-bottom: 0.4375rem;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.2s;
+}
 
-  &:active {
-    .product-card__plan-list {
-      top: 100%;
-    }
-  }
+.product-card__plan-wrapper--active {
+  clip-path: inset(0 0 -300% 0);
 }
 
 .product-card__plan-current {
+  display: flex;
+  justify-content: space-between;
   padding: 0.875rem 0.75rem;
   padding-right: 2.75rem;
   background-color: #fff;
   border-bottom: 2px solid #23d1ae;
   width: 100%;
+  pointer-events: none;
 }
 
 .product-card__plan-list {
   position: absolute;
-  bottom: 100%;
+  top: 100%;
   width: 100%;
-  transition: bottom 0.2s;
 }
 
 .product-card__plan {
