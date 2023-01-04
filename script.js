@@ -1,6 +1,10 @@
-const productCardPlans = document.querySelectorAll(
+const productCardPlanWrapers = document.querySelectorAll(
   ".product-card__plan-wrapper"
 );
+const productCardPlanCurrent = document.querySelectorAll(
+  ".product-card__plan-current"
+);
+const productCardPlans = document.querySelectorAll(".product-card__plan");
 
 function removeProductCardPlansActive(elem) {
   elem.classList.remove("product-card__plan-wrapper--active");
@@ -14,17 +18,26 @@ function toggleProductCardPlansActive(elems) {
   });
 }
 
-productCardPlans.forEach((elem) => {
+function choosePlan(elem) {
+  elem.addEventListener("click", () => {
+    elem.parentNode.parentNode.childNodes[1].innerHTML = elem.innerHTML;
+  });
+}
+
+productCardPlanWrapers.forEach((elem) => {
   elem.addEventListener(
     "click",
-    toggleProductCardPlansActive(productCardPlans)
+    toggleProductCardPlansActive(productCardPlanWrapers)
   );
+});
+
+productCardPlans.forEach((elem) => {
+  choosePlan(elem);
 });
 
 document.querySelector("body").addEventListener("click", (event) => {
   if (!event.target.classList.contains("product-card__plan-wrapper")) {
-    console.log(event.target);
-    productCardPlans.forEach((elem) => {
+    productCardPlanWrapers.forEach((elem) => {
       removeProductCardPlansActive(elem);
     });
   }
