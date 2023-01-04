@@ -1,13 +1,44 @@
 .main__card-block {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .product-card {
+  position: relative;
   width: 21.875rem;
   box-shadow: 0px 8.48242px 25.4473px rgba(29, 29, 27, 0.24);
   border-radius: 4.24121px;
   font-size: 1.125rem;
+  background-color: #fff;
+}
+
+.product-card--best {
+  transform: translateY(-5%);
+  z-index: 1;
+
+  &::after {
+    content: url(../img/card_flag.svg);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-6%, -30%);
+  }
+
+  &::before {
+    content: "BEST CHOICE";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10%, 0);
+    z-index: 1;
+  }
+}
+
+.product-card--best .product-card__top {
+  padding-top: 2.8125rem;
 }
 
 .product-card__top {

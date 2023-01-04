@@ -1,16 +1,26 @@
 .header__top {
   position: relative;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.header__top-content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.3125rem 0;
-  z-index: 1;
 }
 
 .header__content {
+  display: flex;
+
   position: relative;
   padding-top: 2.4375rem;
-  width: 74%;
+}
+
+.header__content-col {
+  width: 71%;
 }
 
 .header__desc {
@@ -22,8 +32,13 @@
 }
 
 .header__img-wrapper {
+  position: relative;
+  width: 29%;
+}
+
+.header__img {
   position: absolute;
-  top: 0;
-  right: -146%;
-  background: url(../img/bg.png);
+  top: -30%;
+  left: 0;
+  max-width: unset;
 }
