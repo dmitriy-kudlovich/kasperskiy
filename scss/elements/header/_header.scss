@@ -14,9 +14,12 @@
 
 .header__content {
   display: flex;
-
-  position: relative;
+  overflow-x: hidden;
   padding-top: 2.4375rem;
+}
+
+.header__content-row {
+  display: flex;
 }
 
 .header__content-col {
@@ -31,14 +34,15 @@
   }
 }
 
+.header__desc--main {
+  width: 80%;
+}
+
 .header__img-wrapper {
-  position: relative;
   width: 29%;
+  transform: translateY(-15%);
 }
 
 .header__img {
-  position: absolute;
-  top: -30%;
-  left: 0;
   max-width: unset;
 }

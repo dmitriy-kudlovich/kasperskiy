@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  transform: translateY(-40%);
 }
 
 .product-card {
@@ -107,7 +108,7 @@
   margin-bottom: 0.5rem;
 }
 
-.product-card__list-item {
+.list-item {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
@@ -122,6 +123,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.main__list-item {
+  margin-bottom: 2.125rem;
 }
 
 .card__accounts {
@@ -144,6 +149,15 @@
   margin-bottom: 0.4375rem;
   clip-path: inset(0 0 0 0);
   transition: clip-path 0.2s;
+  cursor: pointer;
+
+  &::before {
+    content: url(../img/icons/icon__arrow-down.svg);
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .product-card__plan-wrapper--active {
@@ -165,6 +179,7 @@
   position: absolute;
   top: 100%;
   width: 100%;
+  background-color: #fff;
 }
 
 .product-card__plan {
